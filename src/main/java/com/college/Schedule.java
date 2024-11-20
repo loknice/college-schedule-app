@@ -3,6 +3,9 @@ package com.college;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+/* 
+  Колекція, в якій зберігатися документ баз даних MongoDB, що представляє сутність рядку з таблиці з розкладом коледжу.
+*/
 @Document(collection = "college-schedule")
 public class Schedule {
     @Id
@@ -18,8 +21,6 @@ public class Schedule {
     private String year;
     private String startTime;
     private String endTime;
-
-    // Constructor, getters, and setters
 
     public Schedule(String studentFirstName, String studentLastName, String teacherFirstName, String teacherLastName, String courseName, String departmentName, String roomNumber, String semester, String year, String startTime, String endTime) {
         this.studentFirstName = studentFirstName;
